@@ -16,6 +16,8 @@
 		B78D5F1E239AEFA200D4E6EE /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78D5F1D239AEFA200D4E6EE /* DetailViewController.swift */; };
 		B78D5F21239AF0BD00D4E6EE /* Country.json in Resources */ = {isa = PBXBuildFile; fileRef = B78D5F20239AF0BD00D4E6EE /* Country.json */; };
 		B78D5F23239AF18400D4E6EE /* ExchangeRate.json in Resources */ = {isa = PBXBuildFile; fileRef = B78D5F22239AF18400D4E6EE /* ExchangeRate.json */; };
+		B78D5F25239AF9F800D4E6EE /* CountryData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78D5F24239AF9F800D4E6EE /* CountryData.swift */; };
+		B78D5F27239B013B00D4E6EE /* ExchangeRateData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78D5F26239B013B00D4E6EE /* ExchangeRateData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		B78D5F1D239AEFA200D4E6EE /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		B78D5F20239AF0BD00D4E6EE /* Country.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Country.json; sourceTree = "<group>"; };
 		B78D5F22239AF18400D4E6EE /* ExchangeRate.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ExchangeRate.json; sourceTree = "<group>"; };
+		B78D5F24239AF9F800D4E6EE /* CountryData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryData.swift; sourceTree = "<group>"; };
+		B78D5F26239B013B00D4E6EE /* ExchangeRateData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRateData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +71,8 @@
 				B78D5F0D239AEF0700D4E6EE /* ViewController.swift */,
 				B78D5F1D239AEFA200D4E6EE /* DetailViewController.swift */,
 				B78D5F0F239AEF0700D4E6EE /* Main.storyboard */,
+				B78D5F24239AF9F800D4E6EE /* CountryData.swift */,
+				B78D5F26239B013B00D4E6EE /* ExchangeRateData.swift */,
 				B78D5F12239AEF0900D4E6EE /* Assets.xcassets */,
 				B78D5F14239AEF0900D4E6EE /* LaunchScreen.storyboard */,
 				B78D5F17239AEF0900D4E6EE /* Info.plist */,
@@ -157,7 +163,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B78D5F27239B013B00D4E6EE /* ExchangeRateData.swift in Sources */,
 				B78D5F0E239AEF0700D4E6EE /* ViewController.swift in Sources */,
+				B78D5F25239AF9F800D4E6EE /* CountryData.swift in Sources */,
 				B78D5F0A239AEF0700D4E6EE /* AppDelegate.swift in Sources */,
 				B78D5F0C239AEF0700D4E6EE /* SceneDelegate.swift in Sources */,
 				B78D5F1E239AEFA200D4E6EE /* DetailViewController.swift in Sources */,
