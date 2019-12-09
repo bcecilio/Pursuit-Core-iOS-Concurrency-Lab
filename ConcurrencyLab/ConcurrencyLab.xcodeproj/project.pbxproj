@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B77F9DA2239ED5C800F40163 /* CountryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77F9DA1239ED5C800F40163 /* CountryCell.swift */; };
+		B77F9DA4239ED83C00F40163 /* ImageClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77F9DA3239ED83C00F40163 /* ImageClient.swift */; };
 		B78D5F0A239AEF0700D4E6EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78D5F09239AEF0700D4E6EE /* AppDelegate.swift */; };
 		B78D5F0C239AEF0700D4E6EE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78D5F0B239AEF0700D4E6EE /* SceneDelegate.swift */; };
 		B78D5F0E239AEF0700D4E6EE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78D5F0D239AEF0700D4E6EE /* ViewController.swift */; };
@@ -20,7 +22,20 @@
 		B78D5F27239B013B00D4E6EE /* ExchangeRateData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78D5F26239B013B00D4E6EE /* ExchangeRateData.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		B77F9D99239ED2E900F40163 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B78D5EFE239AEF0700D4E6EE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B78D5F05239AEF0700D4E6EE;
+			remoteInfo = ConcurrencyLab;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		B77F9D94239ED2E900F40163 /* ConcurrencyLabTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ConcurrencyLabTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B77F9DA1239ED5C800F40163 /* CountryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryCell.swift; sourceTree = "<group>"; };
+		B77F9DA3239ED83C00F40163 /* ImageClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageClient.swift; sourceTree = "<group>"; };
 		B78D5F06239AEF0700D4E6EE /* ConcurrencyLab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ConcurrencyLab.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B78D5F09239AEF0700D4E6EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B78D5F0B239AEF0700D4E6EE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,6 +52,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		B77F9D91239ED2E900F40163 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B78D5F03239AEF0700D4E6EE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -59,6 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				B78D5F06239AEF0700D4E6EE /* ConcurrencyLab.app */,
+				B77F9D94239ED2E900F40163 /* ConcurrencyLabTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -70,6 +93,8 @@
 				B78D5F0B239AEF0700D4E6EE /* SceneDelegate.swift */,
 				B78D5F0D239AEF0700D4E6EE /* ViewController.swift */,
 				B78D5F1D239AEFA200D4E6EE /* DetailViewController.swift */,
+				B77F9DA1239ED5C800F40163 /* CountryCell.swift */,
+				B77F9DA3239ED83C00F40163 /* ImageClient.swift */,
 				B78D5F0F239AEF0700D4E6EE /* Main.storyboard */,
 				B78D5F24239AF9F800D4E6EE /* CountryData.swift */,
 				B78D5F26239B013B00D4E6EE /* ExchangeRateData.swift */,
@@ -93,6 +118,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		B77F9D93239ED2E900F40163 /* ConcurrencyLabTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B77F9D9D239ED2E900F40163 /* Build configuration list for PBXNativeTarget "ConcurrencyLabTests" */;
+			buildPhases = (
+				B77F9D90239ED2E900F40163 /* Sources */,
+				B77F9D91239ED2E900F40163 /* Frameworks */,
+				B77F9D92239ED2E900F40163 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B77F9D9A239ED2E900F40163 /* PBXTargetDependency */,
+			);
+			name = ConcurrencyLabTests;
+			productName = ConcurrencyLabTests;
+			productReference = B77F9D94239ED2E900F40163 /* ConcurrencyLabTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		B78D5F05239AEF0700D4E6EE /* ConcurrencyLab */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = B78D5F1A239AEF0900D4E6EE /* Build configuration list for PBXNativeTarget "ConcurrencyLab" */;
@@ -120,6 +163,10 @@
 				LastUpgradeCheck = 1120;
 				ORGANIZATIONNAME = "Brendon Cecilio";
 				TargetAttributes = {
+					B77F9D93239ED2E900F40163 = {
+						CreatedOnToolsVersion = 11.2.1;
+						TestTargetID = B78D5F05239AEF0700D4E6EE;
+					};
 					B78D5F05239AEF0700D4E6EE = {
 						CreatedOnToolsVersion = 11.2.1;
 					};
@@ -139,11 +186,19 @@
 			projectRoot = "";
 			targets = (
 				B78D5F05239AEF0700D4E6EE /* ConcurrencyLab */,
+				B77F9D93239ED2E900F40163 /* ConcurrencyLabTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		B77F9D92239ED2E900F40163 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B78D5F04239AEF0700D4E6EE /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -159,6 +214,13 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		B77F9D90239ED2E900F40163 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B78D5F02239AEF0700D4E6EE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -169,10 +231,20 @@
 				B78D5F0A239AEF0700D4E6EE /* AppDelegate.swift in Sources */,
 				B78D5F0C239AEF0700D4E6EE /* SceneDelegate.swift in Sources */,
 				B78D5F1E239AEFA200D4E6EE /* DetailViewController.swift in Sources */,
+				B77F9DA4239ED83C00F40163 /* ImageClient.swift in Sources */,
+				B77F9DA2239ED5C800F40163 /* CountryCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B77F9D9A239ED2E900F40163 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B78D5F05239AEF0700D4E6EE /* ConcurrencyLab */;
+			targetProxy = B77F9D99239ED2E900F40163 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		B78D5F0F239AEF0700D4E6EE /* Main.storyboard */ = {
@@ -194,6 +266,46 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		B77F9D9B239ED2E900F40163 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 879MP5M96B;
+				INFOPLIST_FILE = ConcurrencyLabTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.brendoncecilio.ConcurrencyLabTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ConcurrencyLab.app/ConcurrencyLab";
+			};
+			name = Debug;
+		};
+		B77F9D9C239ED2E900F40163 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 879MP5M96B;
+				INFOPLIST_FILE = ConcurrencyLabTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.brendoncecilio.ConcurrencyLabTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ConcurrencyLab.app/ConcurrencyLab";
+			};
+			name = Release;
+		};
 		B78D5F18239AEF0900D4E6EE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -347,6 +459,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		B77F9D9D239ED2E900F40163 /* Build configuration list for PBXNativeTarget "ConcurrencyLabTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B77F9D9B239ED2E900F40163 /* Debug */,
+				B77F9D9C239ED2E900F40163 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		B78D5F01239AEF0700D4E6EE /* Build configuration list for PBXProject "ConcurrencyLab" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

@@ -20,3 +20,24 @@ struct Currency: Decodable {
     let name: String
     let symbol: String
 }
+
+extension CountryData {
+    func getCountry(from: Data) -> [CountryData] {
+        
+        var countries = [CountryData]()
+        guard let fileURL = Bundle.main.url(forResource: "Country", withExtension: "json") else {
+            fatalError("could not locate json file")
+        }
+        
+        do {
+            let data = try Data(contentsOf: fileURL)
+            let countryData = try JSONDecoder().decode([CountryData].self, from: data)
+            countries = countryData
+        } catch {
+            fatalError("failed to load contents \(error)!!")
+        }
+        
+        return countries
+        
+        }
+    }

@@ -19,7 +19,7 @@
                                 <rect key="frame" x="0.0" y="144" width="414" height="718"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="countryCell" rowHeight="162" id="wGw-ua-UQC">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="countryCell" rowHeight="162" id="wGw-ua-UQC" customClass="CountryCell" customModule="ConcurrencyLab" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="162"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wGw-ua-UQC" id="k1O-GO-iU4">
@@ -54,6 +54,10 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="capitalLabel" destination="w8P-LO-W8d" id="yPA-SN-vgp"/>
+                                            <outlet property="cellImageView" destination="jKM-gl-5iV" id="LXa-AB-UMc"/>
+                                            <outlet property="countryLabel" destination="DpP-wK-bfs" id="lOR-oU-cbV"/>
+                                            <outlet property="populationLabel" destination="TyT-5n-HuR" id="toa-3O-ayb"/>
                                             <segue destination="t0x-kF-zuU" kind="show" id="IFq-fq-3rp"/>
                                         </connections>
                                     </tableViewCell>
