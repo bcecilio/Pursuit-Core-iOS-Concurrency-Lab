@@ -22,8 +22,16 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
+        tableView.delegate = self
         searchBar.delegate = self
         loadData()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let DetailViewController = segue.destination as? DetailViewController, let indexPath = tableView.indexPathForSelectedRow else {
+            return
+        }
+        DetailViewController.countryDetail = country[indexPath.row]
     }
     
     func loadData(){
@@ -43,6 +51,12 @@ extension ViewController: UITableViewDataSource {
         let countries = country[indexPath.row]
         cell.configureCell(country: countries)
         return cell
+    }
+}
+
+extension ViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 160
     }
 }
 

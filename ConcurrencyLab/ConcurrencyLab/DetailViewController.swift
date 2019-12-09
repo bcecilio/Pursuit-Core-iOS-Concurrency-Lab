@@ -9,9 +9,23 @@
 import UIKit
 
 class DetailViewController: UIViewController {
+    
+//    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var countryLabel: UILabel!
+    @IBOutlet weak var populationLabel: UILabel!
+    
+    var countryDetail: CountryData!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        updateUI()
+    }
+    
+    func updateUI() {
+        guard let countryInfo = countryDetail else {
+            fatalError("this is the error \(Error.self)")
+        }
+        countryLabel.text = countryInfo.capital
+        populationLabel.text = countryInfo.population.description
     }
 }

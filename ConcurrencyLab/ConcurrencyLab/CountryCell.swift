@@ -19,6 +19,8 @@ class CountryCell: UITableViewCell {
         countryLabel.text = country.name
         capitalLabel.text = country.capital
         populationLabel.text = country.population.description
+        
+        
     }
 
 }
