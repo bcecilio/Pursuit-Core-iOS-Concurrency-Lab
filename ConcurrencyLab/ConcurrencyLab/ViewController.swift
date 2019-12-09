@@ -23,6 +23,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         tableView.dataSource = self
         searchBar.delegate = self
+        loadData()
     }
     
     func loadData(){

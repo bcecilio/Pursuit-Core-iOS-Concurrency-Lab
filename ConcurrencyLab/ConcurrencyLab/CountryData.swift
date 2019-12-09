@@ -12,17 +12,17 @@ struct CountryData: Decodable {
     let name: String
     let population: Double
     let capital: String
-    let currencies: [Currency]
+//    let currencies: [Currency]
 }
 
-struct Currency: Decodable {
-    let code: String
-    let name: String
-    let symbol: String
-}
+//struct Currency: Decodable {
+//    let code: String
+//    let name: String
+//    let symbol: String
+//}
 
 extension CountryData {
-    func getCountry(from: Data) -> [CountryData] {
+    static func getCountry(from: Data) -> [CountryData] {
         
         var countries = [CountryData]()
         guard let fileURL = Bundle.main.url(forResource: "Country", withExtension: "json") else {
