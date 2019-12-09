@@ -98,7 +98,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5tZ-y8-azC">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5tZ-y8-azC">
                                 <rect key="frame" x="87" y="172" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -123,6 +123,7 @@
                     <navigationItem key="navigationItem" id="qAM-z5-G2K"/>
                     <connections>
                         <outlet property="countryLabel" destination="sPY-Cs-Kkv" id="apm-4R-wEU"/>
+                        <outlet property="imageView" destination="5tZ-y8-azC" id="sIy-af-gB3"/>
                         <outlet property="populationLabel" destination="Wdr-w0-iOC" id="KXq-tT-Cfa"/>
                     </connections>
                 </viewController>

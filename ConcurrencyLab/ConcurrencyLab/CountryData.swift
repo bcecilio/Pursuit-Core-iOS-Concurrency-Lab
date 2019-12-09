@@ -13,6 +13,7 @@ struct CountryData: Decodable {
     let population: Double
     let capital: String
     let currencies: [Currency]
+    let flag: String
 }
 
 struct Currency: Decodable {

@@ -19,6 +19,12 @@ class ViewController: UIViewController {
         }
     }
     
+    var searchQuery = ""{
+        didSet {
+            searchBarQuery()
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
@@ -36,6 +42,11 @@ class ViewController: UIViewController {
     
     func loadData(){
         country = CountryData.getCountry(from: Data.init())
+    }
+    
+    func searchBarQuery() {
+        country = CountryData.getCountry(from: Data.init()).filter
+            {$0.name.lowercased().contains(searchQuery.lowercased())}
     }
 }
 
@@ -61,6 +72,13 @@ extension ViewController: UITableViewDelegate {
 }
 
 extension ViewController: UISearchBarDelegate {
-    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        guard !searchText.isEmpty else {
+            searchBarQuery()
+            loadData()
+            return
+        }
+        searchQuery = searchText
+    }
 }
 

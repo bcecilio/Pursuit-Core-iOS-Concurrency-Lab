@@ -10,7 +10,7 @@ import UIKit
 
 class DetailViewController: UIViewController {
     
-//    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var countryLabel: UILabel!
     @IBOutlet weak var populationLabel: UILabel!
     
@@ -27,5 +27,16 @@ class DetailViewController: UIViewController {
         }
         countryLabel.text = countryInfo.capital
         populationLabel.text = countryInfo.population.description
+        
+        ImageClient.fetchImage(for: countryInfo.flag) { [weak self](result) in
+            switch result {
+            case .failure(let error):
+                print(error)
+            case .success(let image):
+                DispatchQueue.main.async{
+                    self?.imageView.image = image
+                }
+        }
+        }
     }
 }
