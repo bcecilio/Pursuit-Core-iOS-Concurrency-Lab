@@ -20,7 +20,7 @@ class CountryCell: UITableViewCell {
         capitalLabel.text = country.capital
         populationLabel.text = country.population.description
         
-        ImageClient.fetchImage(for: "www.countryflags.io/\(country.alpha2code)/flat/64.png") { (result) in
+        ImageClient.fetchImage(for: "https://www.countryflags.io/\(country.alpha2Code)/flat/64.png") { (result) in
             switch result {
             case .success(let image):
                 DispatchQueue.main.async {

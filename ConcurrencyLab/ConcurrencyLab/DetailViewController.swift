@@ -28,7 +28,7 @@ class DetailViewController: UIViewController {
         countryLabel.text = countryInfo.capital
         populationLabel.text = countryInfo.population.description
         
-        ImageClient.fetchImage(for: countryInfo.flag) { [weak self](result) in
+        ImageClient.fetchImage(for: "https://www.countryflags.io/\(countryDetail.alpha2Code)/flat/64.png") { [weak self](result) in
             switch result {
             case .failure(let error):
                 print(error)
