@@ -41,11 +41,11 @@ class ViewController: UIViewController {
     }
     
     func loadData(){
-        country = CountryData.getCountry(from: Data.init())
+        country = CountryData.getCountry()
     }
     
     func searchBarQuery() {
-        country = CountryData.getCountry(from: Data.init()).filter
+        country = CountryData.getCountry().filter
             {$0.name.lowercased().contains(searchQuery.lowercased())}
     }
 }
