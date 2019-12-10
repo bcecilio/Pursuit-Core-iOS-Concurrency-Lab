@@ -20,7 +20,15 @@ class CountryCell: UITableViewCell {
         capitalLabel.text = country.capital
         populationLabel.text = country.population.description
         
-        
+        ImageClient.fetchImage(for: "www.countryflags.io/\(country.alpha2code)/flat/64.png") { (result) in
+            switch result {
+            case .success(let image):
+                DispatchQueue.main.async {
+                    self.cellImageView.image = image
+                }
+            case .failure(let appError):
+                print("hahaha \(appError)")
+            }
+        }
     }
-
 }

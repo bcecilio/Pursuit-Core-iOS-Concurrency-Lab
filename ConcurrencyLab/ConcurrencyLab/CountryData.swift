@@ -12,14 +12,8 @@ struct CountryData: Decodable {
     let name: String
     let population: Double
     let capital: String
-    let currencies: [Currency]
+    let alpha2code: String
     let flag: String
-}
-
-struct Currency: Decodable {
-    let code: String
-    let name: String
-    let symbol: String
 }
 
 extension CountryData {
@@ -29,7 +23,6 @@ extension CountryData {
         guard let fileURL = Bundle.main.url(forResource: "Country", withExtension: "json") else {
             fatalError("could not locate json file")
         }
-        
         do {
             let data = try Data(contentsOf: fileURL)
             let countryData = try JSONDecoder().decode([CountryData].self, from: data)
@@ -37,8 +30,6 @@ extension CountryData {
         } catch {
             fatalError("failed to load contents \(error)!!")
         }
-        
         return countries
-        
-        }
     }
+}

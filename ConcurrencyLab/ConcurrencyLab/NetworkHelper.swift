@@ -37,26 +37,22 @@ class NetworkHelper {
         // suspended simply won't perform netork errors and time list if you don't explicitly resume() request
         
         let dataTask = session.dataTask(with: url) {(data, response, error) in
-            
             // 1. deal with error if any
             // check for client network errors
             if let error = error {
                 completion(.failure(.networkClientError(error)))
             }
-            
             // 2. downcast URLResponse (response) to HTTPURLResponse to get access to the statusCode
             //    property to HTTPURLResponse.
             guard let urlResponse = response as? HTTPURLResponse else {
                 completion(.failure(.noResponse))
                 return
             }
-            
             // 3. unwrap the data object.
             guard let data = data else {
                 completion(.failure(.noData))
                 return
             }
-            
             // 4. validate that the status code is in the 200 range
             //    otherwise it's a bad status code.
             switch urlResponse.statusCode {

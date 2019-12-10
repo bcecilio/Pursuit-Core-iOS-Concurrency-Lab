@@ -13,19 +13,7 @@ extension UIImageView {
     // instance method
     func setImage(with urlString: String, completion: @escaping (Result<UIImage, AppError>) -> ()) {
         
-        // configure UIActivityIndicatorView
-        let activityIndicator = UIActivityIndicatorView(style: .large)
-        activityIndicator.color = .orange
-        activityIndicator.center = center // implies center of the UIImageView
-        addSubview(activityIndicator) // this adds the UIActivityIndicatorView to the ImageView
-        activityIndicator.startAnimating()
-        
-        NetworkHelper.shared.performDataTask(with: urlString) { [weak activityIndicator](result) in
-            
-            DispatchQueue.main.async {
-                activityIndicator?.stopAnimating()
-            }
-            
+        NetworkHelper.shared.performDataTask(with: urlString) { (result) in
             switch result {
             case .failure(let appError):
                 completion(.failure(.networkClientError(appError)))

@@ -15,7 +15,7 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var populationLabel: UILabel!
     
     var countryDetail: CountryData!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         updateUI()
@@ -36,7 +36,7 @@ class DetailViewController: UIViewController {
                 DispatchQueue.main.async{
                     self?.imageView.image = image
                 }
-        }
+            }
         }
     }
 }
